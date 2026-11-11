@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>BusTrack - Acompanhar onibus</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar"><div class="brand">BUS<span>TRACK</span></div><nav><a href="#acompanhar">Acompanhar</a><a href="motorista.html">Area do motorista</a></nav></header>
+<main>
+<section class="hero" id="acompanhar">
+  <div><span class="tag">TRANSPORTE EM TEMPO REAL</span><h1>Saiba onde o onibus esta <span>antes de sair.</span></h1><p>Informe a linha ou o codigo da viagem para acompanhar a ultima localizacao enviada pelo motorista.</p><form class="search" onsubmit="event.preventDefault(); document.querySelector('#status').scrollIntoView({behavior:'smooth'})"><input aria-label="Linha ou codigo" placeholder="Ex.: MARA-01"><button>Ver onibus</button></form></div>
+  <div class="visual" aria-label="Ilustracao do mapa"><div class="road"></div><div class="pin">🚌</div><div class="bubble">Linha MARA-01<br><strong>A caminho</strong></div></div>
+</section>
+<section class="status-card" id="status"><div><small>LINHA</small><strong>MARA-01</strong></div><div><small>STATUS</small><strong class="green">● Em rota</strong></div><div><small>ULTIMA ATUALIZACAO</small><strong>agora mesmo</strong></div><button type="button" onclick="alert('Na proxima etapa, este botao centraliza o mapa usando Leaflet.')">Centralizar no mapa</button></section>
+<section class="how"><span class="tag">COMO FUNCIONA</span><h2>Simples para quem dirige. Claro para quem espera.</h2><div class="steps"><article><b>01</b><h3>Motorista inicia</h3><p>Abre a pagina do motorista, informa a linha e toca em iniciar compartilhamento.</p></article><article><b>02</b><h3>GPS envia posicao</h3><p>O navegador coleta latitude e longitude, com permissao do motorista.</p></article><article><b>03</b><h3>Usuario acompanha</h3><p>A pagina publica consulta a viagem e atualiza a posicao do onibus no mapa.</p></article></div></section>
+</main>
+<footer>Projeto BusTrack • prototipo para GitHub</footer>
+</body></html>
